@@ -6,4 +6,4 @@
       - tmux
 
 - name: run ls and save the result in /home/mujin/ folder
-  shell: /usr/bin/ls > /home/mujin/ls_result.log
+  shell: /usr/bin/ls > /home/mujin/ls_result2.log
