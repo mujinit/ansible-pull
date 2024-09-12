@@ -1,0 +1,9 @@
+- name: Copy update_chrome.py to local machine
+  copy:
+    src: files/update_chrome.py
+    dest: ~/Downloads/update_chrome.py
+  delegate_to: localhost
+
+- name: Run update_chrome.py on local machine
+  command: python3 ~/Downloads/update_chrome.py
+  delegate_to: localhost
