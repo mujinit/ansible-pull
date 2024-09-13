@@ -27,7 +27,7 @@ def launch_chrome():
     print("Launching Chrome...")
     try:
         # Start Chrome in the background
-        subprocess.run(['google-chrome', '&'], check=True)
+        subprocess.run(['google-chrome'], check=True)
         print("Chrome launched.")
     except subprocess.CalledProcessError as e:
         print(f"Failed to launch Chrome: {e}")
