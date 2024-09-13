@@ -17,7 +17,7 @@ def update_chrome():
     try:
         # Update package list and install the latest version of Chrome
         subprocess.run(['sudo', 'apt', 'update', '-qq'], check=True)
-        subprocess.run(['sudo', 'apt', 'install', '-y', '--reinstall', 'google-chrome-stable'], check=True)
+        subprocess.run(['sudo', 'apt', 'install', '-y', 'google-chrome-stable'], check=True)
         print("Chrome updated to the latest version.")
     except subprocess.CalledProcessError as e:
         print(f"Failed to update Chrome: {e}")
