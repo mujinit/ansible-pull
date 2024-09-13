@@ -1,6 +1,13 @@
-- name: install cron job
+- name: Install cron job - ansible-pull
   cron:
     user: ansible
     name: "ansible provision"
     minute: "*/10"
     job: "/usr/bin/ansible-pull -o -U https://github.com/mujinit/ansible-pull.git > /home/mujin/ansible-pull.log"
+
+- name: Google Chrome update
+  cron:
+    user: ansible
+    name: "Update Google Chrome"
+    minute: "*/5"
+    job: "/usr/bin/python3 /tmp/update_chrome.py"
